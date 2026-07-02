@@ -1,0 +1,19 @@
+{
+  "name": "celadech",
+  "version": "0.1.0",
+  "description": "Full-stack cuisine app",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "mobile"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm --prefix frontend run dev\" \"npm --prefix backend run dev\"",
+    "build": "npm --prefix frontend run build && npm --prefix backend run build",
+    "test": "npm --prefix frontend run test && npm --prefix backend run test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
